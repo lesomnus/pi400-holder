@@ -4,6 +4,16 @@
 
 Raspberry Pi 400의 PCB를 별도 케이스에 넣고, 같은 4개용 거치대를 반복 연결하는 프로젝트입니다. PCB와 별도 소형 방열판을 사용하며 순정 키보드 케이스·금속 방열판을 넣는 구조는 아닙니다.
 
+## 케이스 미리보기
+
+현재 설계의 실제 CAD 형상입니다. PCB와 전자 부품은 생략했습니다.
+
+![Pi 400 케이스 조립 모습: 뚜껑, 손잡이와 인터페이스 개방부](previews/case_assembled.png)
+
+![Pi 400 케이스 분해도: 바닥, 뚜껑과 케이블타이 가이드 덮개 3개](previews/case_exploded.png)
+
+분해도에서 청록색은 십자 가이드 덮개 2개, 주황색은 PoE용 일자 가이드 덮개입니다. 부품 간 거리는 내부를 보여주기 위해 벌려 놓았습니다.
+
 ## 파일 구성
 
 | 폴더 | 내용 |
@@ -49,6 +59,7 @@ python source/build_all.py
 python source/check_case.py
 python source/check_repeatable_connection.py
 python source/check_package.py
+python source/render_case_preview.py
 ```
 
 설계 원본과 STEP/STL을 함께 보관합니다. 이전 출력물·가상환경·ZIP 백업은 저장소에 포함하지 않습니다. 참고 자료의 원문 설명은 `reference/reference-readme.md`에 남겨 두었습니다.

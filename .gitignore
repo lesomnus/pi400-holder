@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+cad-env/
+*.log
+*.zip
+
+# Previously extracted copy of an older release.
+/Pi400_FINAL/
+

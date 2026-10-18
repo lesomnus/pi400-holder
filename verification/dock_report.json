@@ -1,0 +1,68 @@
+{
+  "single_repeatable_part": true,
+  "part_size_mm": [
+    273,
+    216.8,
+    22.5
+  ],
+  "group_offset_mm": 222.4,
+  "two_plate_width_mm": 439.2,
+  "case_gaps_mm": [
+    27,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27
+  ],
+  "unfilled_joint_gap_mm": 0,
+  "connector_size_mm": [
+    273,
+    27.6,
+    10
+  ],
+  "connector_count_per_joint": 1,
+  "connector_spine_width_mm": 5.6,
+  "connector_top_equals_case_seat_mm": 10,
+  "keys_and_sockets_mm": [
+    12,
+    8,
+    2
+  ],
+  "key_fit_allowance_mm": 0,
+  "end_fit_allowance_mm": 0,
+  "side_wing_clearance_per_side_mm": 0.25,
+  "wing_inner_gap_mm": 29.1,
+  "seat_wing_slits_filled_to_z_mm": 10,
+  "opposite_boss_projection_mm": 1.6,
+  "handle_boss_projection_mm": 1.2,
+  "all_eight_cases_clear": true,
+  "three_same_parts_connect": true,
+  "m2p5x8_hardware_clear": true,
+  "bolt_direction": "bottom to top",
+  "shaft_bore_mm": 2.5,
+  "head_pocket_diameter_depth_mm": [
+    4.5,
+    2.7
+  ],
+  "nut_pocket_af_depth_mm": [
+    5.1,
+    1.8
+  ],
+  "hardware_added_clearance_mm": 0,
+  "hardware_coupon_physically_confirmed_by_user": true,
+  "front_back_links_compatible": true,
+  "connector_nut_pocket_roof_bridge_mm": 5.1,
+  "connector_print_columns_checked": true,
+  "restraint_overlap_mm3": {
+    "shift_0.1_0": 3.199999999999894,
+    "shift_-0.1_0": 3.199999999999864,
+    "shift_0_0.1": 4.799999999999301,
+    "shift_0_-0.1": 168.59999999999047,
+    "yaw_-0.2": 216.9310646026367,
+    "yaw_0.2": 199.77851315729086
+  },
+  "physical_fit_tested": false,
+  "physical_rigidity_tested": false
+}

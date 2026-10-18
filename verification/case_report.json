@@ -1,0 +1,103 @@
+{
+  "revision": "2026-10-18 PCB B X84 and B/C diameter4.9",
+  "holes": [
+    {
+      "id": "A",
+      "pcb_center_mm": [
+        3.75,
+        8.0
+      ],
+      "case_center_mm": [
+        13.75,
+        46.15
+      ],
+      "pcb_hole_diameter_mm": 2.95,
+      "pin_diameter_mm": 2.65,
+      "lid_socket_diameter_mm": 3.35
+    },
+    {
+      "id": "B",
+      "pcb_center_mm": [
+        84.0,
+        25.0
+      ],
+      "case_center_mm": [
+        94.0,
+        29.15
+      ],
+      "pcb_hole_diameter_mm": 4.9,
+      "pin_diameter_mm": 4.6,
+      "lid_socket_diameter_mm": 5.3
+    },
+    {
+      "id": "C",
+      "pcb_center_mm": [
+        154.0,
+        25.0
+      ],
+      "case_center_mm": [
+        164.0,
+        29.15
+      ],
+      "pcb_hole_diameter_mm": 4.9,
+      "pin_diameter_mm": 4.6,
+      "lid_socket_diameter_mm": 5.3
+    },
+    {
+      "id": "D",
+      "pcb_center_mm": [
+        223.0,
+        8.0
+      ],
+      "case_center_mm": [
+        233.0,
+        46.15
+      ],
+      "pcb_hole_diameter_mm": 2.9,
+      "pin_diameter_mm": 2.6,
+      "lid_socket_diameter_mm": 3.3
+    }
+  ],
+  "mesh": {
+    "01_case_base": {
+      "dimensions_mm": [
+        273.0,
+        64.0,
+        26.0
+      ],
+      "volume_mm3": 78370.41456633287,
+      "watertight": true
+    },
+    "02_case_lid": {
+      "dimensions_mm": [
+        247.0,
+        64.0,
+        19.04999923706055
+      ],
+      "volume_mm3": 40696.47897354577,
+      "watertight": true
+    },
+    "03_cross_guide_cap_print_2": {
+      "dimensions_mm": [
+        24.0,
+        24.0,
+        7.6999998092651385
+      ],
+      "volume_mm3": 966.2682133037912,
+      "watertight": true
+    },
+    "04_single_guide_cap_print_1": {
+      "dimensions_mm": [
+        6.599999904632568,
+        24.0,
+        7.699999809265137
+      ],
+      "volume_mm3": 545.171614754636,
+      "watertight": true
+    }
+  },
+  "exported_pin_and_lid_socket_geometry_measured": true,
+  "case_lid_caps_pcb_proxy_no_overlap": true,
+  "pcb_proxy_excludes_components": true,
+  "new_pcb_pin_physical_fit_tested": false
+}

@@ -1,0 +1,12 @@
+{
+  "all_7_parts_match_verified_manifest": true,
+  "printable_meshes_valid": true,
+  "sources_self_contained": true,
+  "assembly_solid_counts": {
+    "case": 5,
+    "dock_pair": 3,
+    "eight_pi": 43
+  },
+  "assembly_contains_current_poe_guide_cases": true,
+  "physical_fit_tested": false
+}

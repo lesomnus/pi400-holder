@@ -1,0 +1,8 @@
+{
+  "production_case_stl_unchanged": true,
+  "successful_m2p5_coupon_files_unchanged": true,
+  "production_side_base_exactly_matches_successful_m2p5_coupon": true,
+  "production_connector_crop_exactly_matches_successful_m2p5_coupon": true,
+  "test_dock_contact_region_exactly_matches_production_quad": true,
+  "scope": "Historical dock revision validation; predates the 2026-10-18 PCB B-hole change. See case_report.json for current case."
+}

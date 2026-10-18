@@ -1,0 +1,31 @@
+이 Pi400_FINAL 폴더를 프로젝트 저장소의 루트로 보관하면 됩니다.
+
+권장 보관 구성
+source/*.py + source/design_parameters.json : 치수와 형상을 다시 수정/생성하는 설계 원본. 가장 중요.
+STEP/*.step : 다른 CAD 프로그램에서 열고 수정할 수 있는 정밀 형상.
+STL/*.stl : 슬라이서에 넣어 바로 출력하는 최종 파일. STL만으로는 원래 치수/설계 규칙이 보존되지 않음.
+START_HERE_KO.txt : 출력 수량과 조립 방법.
+verification/ : 형상 검사 결과.
+reference/ : 당시 사용한 실측 자료. 원문은 과거 수치를 기록한 자료이며 최신 수정값은 source에 있음.
+previews/ : 조립 그림.
+
+Git에는 위 폴더와 파일을 함께 저장하세요. 이 정도 파일 크기에서는 STEP/STL도 같이 보관할 수 있습니다.
+프로젝트 상위의 work/cad-env, _OLD_DELETE_PENDING, ZIP 백업을 함께 넣을 필요는 없습니다.
+이 폴더에 .gitignore와 .gitattributes를 포함했습니다. 저장소 루트로 사용합니다.
+STL/STEP은 Git에서 형상 차이를 읽기 어려우므로 변경 내용은 source의 수치와 커밋 설명으로 기록하세요.
+
+슬라이서 설정 보존
+Bambu Studio에서 실제 출력 배치/필라멘트/출력 설정까지 보관하려면 별도로 프로젝트 .3mf를 저장하세요.
+현재 제공한 STL에는 레이어 높이, 벽 수, 채움률 등의 출력 설정은 들어 있지 않습니다.
+
+재생성
+설계 엔진은 Python + CadQuery 2.8입니다.
+source/build_all.py를 실행하면 출력용 STEP/STL과 조립 모델을 다시 생성합니다.
+검사/미리보기에는 trimesh, numpy, rtree, vtk, Pillow도 사용합니다.
+
+2026-10-18 PCB 구멍 기준 변경
+B: X 83.2 -> 84.0mm, Y 25mm 유지, 구멍 지름 4.95 -> 4.9mm.
+C: X 154mm, Y 25mm, 구멍 지름 4.9mm 유지.
+기존 핀 지름 차이 0.3mm 유지: B와 C 출력 핀은 모두 Ø4.6mm.
+B 바닥 핀/받침 및 뚜껑 대응 기둥이 함께 이동했습니다.
+원래 실측표와 공식 공개 규격을 혼동하지 않도록 이 변경은 사용자 지정 설계값으로 기록했습니다.

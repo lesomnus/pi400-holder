@@ -1,0 +1,113 @@
+{
+  "case_length": 247.0,
+  "case_width": 64.0,
+  "base_height": 26.0,
+  "wall": 2.4,
+  "floor": 3.2,
+  "corner_radius": 4.0,
+  "lid_thickness": 2.6,
+  "lid_clearance": 0.35,
+  "lip_height": 2.0,
+  "pcb_standoff_height": 5.0,
+  "lid_screw_pilot": 2.6,
+  "lid_screw_clearance": 3.4,
+  "io_start_x": 9.5,
+  "io_width": 228.0,
+  "io_bottom_z": 6.2,
+  "tie_cluster_centers": [
+    [
+      55.0,
+      32.0
+    ],
+    [
+      196.0,
+      32.0
+    ]
+  ],
+  "tie_slot_length": 8.0,
+  "tie_slot_width": 3.0,
+  "tie_pair_spacing": 20.0,
+  "pcb_length": 227.0,
+  "pcb_width": 50.0,
+  "pcb_thickness": 1.2,
+  "pcb_measured_origin_case_xy": [
+    10.0,
+    54.15
+  ],
+  "pcb_measured_holes": [
+    {
+      "id": "A",
+      "x": 3.75,
+      "y": 8.0,
+      "diameter": 2.95
+    },
+    {
+      "id": "B",
+      "x": 84.0,
+      "y": 25.0,
+      "diameter": 4.9
+    },
+    {
+      "id": "C",
+      "x": 154.0,
+      "y": 25.0,
+      "diameter": 4.9
+    },
+    {
+      "id": "D",
+      "x": 223.0,
+      "y": 8.0,
+      "diameter": 2.9
+    }
+  ],
+  "pin_diametral_clearance": 0.3,
+  "pin_height_above_support": 2.4,
+  "pin_tip_height": 0.4,
+  "pin_tip_diameter_reduction": 0.6,
+  "pcb_support_extra_diameter": 3.2,
+  "lid_pcb_clearance": 0.15,
+  "lid_pin_socket_depth": 2.0,
+  "lid_socket_diameter_extra": 0.4,
+  "auxiliary_support_centers": [
+    [
+      70.0,
+      53.65
+    ],
+    [
+      178.0,
+      53.65
+    ]
+  ],
+  "auxiliary_support_width_x": 6.0,
+  "auxiliary_support_width_y": 1.0,
+  "auxiliary_support_recess": 0.15,
+  "heatsink_height_above_pcb_max": 11.3,
+  "guide_channel_width": 4.6,
+  "guide_channel_height": 1.8,
+  "guide_wall": 1.0,
+  "tie_target_width_max": 3.6,
+  "tie_target_thickness_max": 1.1,
+  "guide_path_apex_z": 4.8,
+  "guide_cap_half_length": 12.0,
+  "guide_leg_side_clearance": 0.15,
+  "guide_bend_radius": 12.816666666666666,
+  "pcb_hole_revision": {
+    "date": "2026-10-18",
+    "basis": "User requested design override; not official mechanical specification",
+    "changes": {
+      "B_x_mm": [
+        83.2,
+        84.0
+      ],
+      "B_diameter_mm": [
+        4.95,
+        4.9
+      ],
+      "C_diameter_mm": [
+        4.9,
+        4.9
+      ]
+    },
+    "pin_diametral_clearance_retained_mm": 0.3
+  }
+}

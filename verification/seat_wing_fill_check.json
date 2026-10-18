@@ -1,0 +1,10 @@
+{
+  "only_changes_are_six_seat_wing_gap_fills_per_bay": true,
+  "fill_top_z_mm": 10,
+  "single_added_volume_mm3": 72,
+  "quad_added_volume_mm3": 288,
+  "wing_inner_gap_mm": 29.1,
+  "other_printable_files_byte_identical": true,
+  "test_and_production_contact_geometry_identical": true,
+  "scope": "Historical dock revision validation; predates the 2026-10-18 PCB B-hole change. See case_report.json for current case."
+}

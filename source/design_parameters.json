@@ -43,15 +43,17 @@
     },
     {
       "id": "B",
-      "x": 84.0,
+      "x": 83.2,
       "y": 25.0,
-      "diameter": 4.9
+      "diameter": 4.9,
+      "physical_location": "large mount farther from handle"
     },
     {
       "id": "C",
-      "x": 154.0,
+      "x": 153.2,
       "y": 25.0,
-      "diameter": 4.9
+      "diameter": 4.9,
+      "physical_location": "large mount nearer handle"
     },
     {
       "id": "D",
@@ -92,22 +94,22 @@
   "guide_leg_side_clearance": 0.15,
   "guide_bend_radius": 12.816666666666666,
   "pcb_hole_revision": {
-    "date": "2026-10-18",
-    "basis": "User requested design override; not official mechanical specification",
+    "date": "2026-10-19",
+    "basis": "User confirmed physical mounting locations; not official mechanical specification",
     "changes": {
-      "B_x_mm": [
-        83.2,
-        84.0
+      "farther_large_mount_B_pcb_x_mm": [
+        84.0,
+        83.2
       ],
-      "B_diameter_mm": [
-        4.95,
-        4.9
-      ],
-      "C_diameter_mm": [
-        4.9,
-        4.9
+      "nearer_large_mount_C_pcb_x_mm": [
+        154.0,
+        153.2
       ]
     },
-    "pin_diametral_clearance_retained_mm": 0.3
+    "farther_mount_restored_to_original": true,
+    "nearer_mount_moves_away_from_handle_mm": 0.8,
+    "pin_diametral_clearance_retained_mm": 0.3,
+    "B_C_pcb_hole_diameter_mm": 4.9,
+    "B_C_printed_pin_diameter_mm": 4.6
   }
 }

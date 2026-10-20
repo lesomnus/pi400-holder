@@ -1,9 +1,9 @@
 {
   "STL/01_case_base.stl": {
-    "sha256": "1ddae7288fdd3eb8fd94a90e8ed21f3a450df853b7cb08ebdcc333bc5527f848"
+    "sha256": "5054e67197021c78e9718a988761d59fd824209b7ef2c4c8668b0b725fdb034f"
   },
   "STL/02_case_lid.stl": {
-    "sha256": "c69096a8864a69674cef55d7ba088b201e40f6407f802f85ffba96e697699412"
+    "sha256": "040383e882c3b9823f6879d21083ea532b1ac55faa4056be12a8ae1c29c37853"
   },
   "STL/03_cross_guide_cap_print_2.stl": {
     "sha256": "88c39d545dfcddfdbb4e94373c9d18bce1641504dc077beab552122ea1a667d1"
@@ -21,10 +21,10 @@
     "sha256": "166462622ac6f3c710727c93ea5a150c088faf51bff54fe71935558ca6044a76"
   },
   "STEP/01_case_base.step": {
-    "sha256": "dbc961c419b942f88e593069c345ed8d32265b3d140e793d264c42652df90317"
+    "sha256": "2954fe8bb8f53c8b6d0f518a11872768d3bddcd8ee1939ee52f494e1d13227f6"
   },
   "STEP/02_case_lid.step": {
-    "sha256": "4e8d4ac72d0e6c3481541c871c8faf478545b880834476ab4fd949de8d930533"
+    "sha256": "f2567a01666afcefddd3058c20f6ac2de2c11ab647e350280301b55b1fbdf4c0"
   },
   "STEP/03_cross_guide_cap_print_2.step": {
     "sha256": "961263a58a234d471cf179fe64436f806953f1209f48dac91662348af0a7aa79"

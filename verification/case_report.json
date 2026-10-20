@@ -1,5 +1,5 @@
 {
-  "revision": "2026-10-19 restore far mount B; move near mount C 0.8mm away from handle",
+  "revision": "2026-10-20 move far mount B 0.5mm away from handle; retain near mount C",
   "holes": [
     {
       "id": "A",
@@ -18,11 +18,11 @@
     {
       "id": "B",
       "pcb_center_mm": [
-        83.2,
+        82.7,
         25.0
       ],
       "case_center_mm": [
-        93.2,
+        92.7,
         29.15
       ],
       "pcb_hole_diameter_mm": 4.9,

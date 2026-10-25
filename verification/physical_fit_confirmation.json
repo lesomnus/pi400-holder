@@ -1,0 +1,57 @@
+{
+  "confirmed_on": "2026-10-25",
+  "timezone": "Asia/Seoul",
+  "confirmation_source": "user report after printing current files",
+  "user_statement_ko": "지금 파일 출력하니까 모든게 정확해. git에 반영도 해줘",
+  "design_commit": "805cf6c1405c1265942f8a096097c5050ab8f3f0",
+  "physical_fit_confirmed_by_user": true,
+  "scope_ko": "최신 출력물의 맞춤. 최종 PCB 기둥 위치 포함. 별도 하중·내구 시험 결과를 의미하지 않음.",
+  "large_mount_case_x_mm": {
+    "far_from_handle": 92.7,
+    "near_handle": 163.2
+  },
+  "confirmed_files": {
+    "STL/01_case_base.stl": {
+      "sha256": "5054e67197021c78e9718a988761d59fd824209b7ef2c4c8668b0b725fdb034f"
+    },
+    "STL/02_case_lid.stl": {
+      "sha256": "040383e882c3b9823f6879d21083ea532b1ac55faa4056be12a8ae1c29c37853"
+    },
+    "STL/03_cross_guide_cap_print_2.stl": {
+      "sha256": "88c39d545dfcddfdbb4e94373c9d18bce1641504dc077beab552122ea1a667d1"
+    },
+    "STL/04_single_guide_cap_print_1.stl": {
+      "sha256": "cfe2348d097c77084dd56c2fe2c07b46c17416b1524f0a5dc840191ee8b245f5"
+    },
+    "STL/05_quad_dock_repeatable.stl": {
+      "sha256": "55916b584980f0aabf0cdd2a7b687603baa728e8e5564baea69e604f14a707eb"
+    },
+    "STL/06_gap_filling_connector.stl": {
+      "sha256": "ceecea43027e00bc8777142238c958d1bc2534984cb3559b8cb21e5e536b57b0"
+    },
+    "STL/08_depth_link_optional.stl": {
+      "sha256": "166462622ac6f3c710727c93ea5a150c088faf51bff54fe71935558ca6044a76"
+    },
+    "STEP/01_case_base.step": {
+      "sha256": "2954fe8bb8f53c8b6d0f518a11872768d3bddcd8ee1939ee52f494e1d13227f6"
+    },
+    "STEP/02_case_lid.step": {
+      "sha256": "f2567a01666afcefddd3058c20f6ac2de2c11ab647e350280301b55b1fbdf4c0"
+    },
+    "STEP/03_cross_guide_cap_print_2.step": {
+      "sha256": "961263a58a234d471cf179fe64436f806953f1209f48dac91662348af0a7aa79"
+    },
+    "STEP/04_single_guide_cap_print_1.step": {
+      "sha256": "02f034d4b14fa79b6f68860d26f5f4716e0c49a8d02f7dd97a95b45e679fb398"
+    },
+    "STEP/05_quad_dock_repeatable.step": {
+      "sha256": "8ff977ef55a479287ad8dab97562293e96aafa7d9015aa285f609edede84e801"
+    },
+    "STEP/06_gap_filling_connector.step": {
+      "sha256": "86e97f4dcfed209c3acb59fccd8b10eff0a9cf8cf521337c8f728881c62c4820"
+    },
+    "STEP/08_depth_link_optional.step": {
+      "sha256": "e1d2ad1011d1b9faaa8f26ec88e3015646571d237dd557cb1102ad80f701b1b8"
+    }
+  }
+}

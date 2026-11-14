@@ -65,7 +65,7 @@
         64.0,
         26.0
       ],
-      "volume_mm3": 78370.414555459,
+      "volume_mm3": 78101.47268779988,
       "watertight": true
     },
     "02_case_lid": {
@@ -86,7 +86,7 @@
       "volume_mm3": 966.2682133037912,
       "watertight": true
     },
-    "04_single_guide_cap_print_1": {
+    "04_single_guide_cap_print_3": {
       "dimensions_mm": [
         6.599999904632568,
         24.0,
@@ -100,5 +100,17 @@
   "case_lid_caps_pcb_proxy_no_overlap": true,
   "exported_stl_large_pin_centers_checked": true,
   "pcb_proxy_excludes_components": true,
-  "new_pcb_pin_physical_fit_tested": false
+  "new_guide_pair_centers_mm": [
+    [
+      217.0,
+      32.0
+    ],
+    [
+      136.0,
+      32.0
+    ]
+  ],
+  "new_guide_spacing_mm": 81,
+  "new_passages_match_reference": true,
+  "new_guides_physical_fit_tested": false
 }

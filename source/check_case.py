@@ -27,13 +27,23 @@ assert holes[2]['pcb_center_mm']==[153.2,25] and holes[2]['pcb_hole_diameter_mm'
 # Physical orientation: handle extends past X=247; B is farther away, C is nearer.
 assert abs(holes[1]['case_center_mm'][0]-92.7)<1e-6
 assert abs(holes[2]['case_center_mm'][0]-163.2)<1e-6
-caps=[F['G']['make_cap'](x,y) for x,y in P['tie_cluster_centers']]+[F['single_parts']()[1]]
+caps=[F['G']['make_cap'](x,y) for x,y in P['tie_cluster_centers']]+[F['single_parts'](x,y)[1] for x,y in F['CENTERS']]
+# Compare each new exported passage against the previously tested guide at X=146.
+def guide_section(x,y):
+    area=C['box'](x-4,y-13,-1,8,26,9)
+    return b.intersect(area).translate((-x,-y,0))
+ref,near,inboard=F['CENTERS']
+assert near[0]-inboard[0]==81 and near[1]==inboard[1]==ref[1]
+baseline=guide_section(*ref)
+for center in (near,inboard):
+    section=guide_section(*center)
+    assert baseline.cut(section).val().Volume()+section.cut(baseline).val().Volume()<1e-5
 pcb=C['make_pcb_proxy']()
 parts=[b,l,*caps,pcb]
 for i,a in enumerate(parts):
     for q in parts[i+1:]:assert abs(a.val().intersect(q.val()).Volume())<1e-5
 mesh_report={}
-for name in ('01_case_base','02_case_lid','03_cross_guide_cap_print_2','04_single_guide_cap_print_1'):
+for name in ('01_case_base','02_case_lid','03_cross_guide_cap_print_2','04_single_guide_cap_print_3'):
     m=trimesh.load(R/'STL'/(name+'.stl'),force='mesh')
     assert m.is_watertight and m.is_winding_consistent and len(m.split())==1
     assert np.all(m.extents<=[340,320,340]) and abs(m.bounds[0,2])<1e-5
@@ -46,7 +56,8 @@ for name in ('01_case_base','02_case_lid','03_cross_guide_cap_print_2','04_singl
 report=dict(revision='2026-10-20 move far mount B 0.5mm away from handle; retain near mount C',holes=holes,mesh=mesh_report,
     exported_pin_and_lid_socket_geometry_measured=True,case_lid_caps_pcb_proxy_no_overlap=True,
     exported_stl_large_pin_centers_checked=True,
-    pcb_proxy_excludes_components=True,new_pcb_pin_physical_fit_tested=False)
+    pcb_proxy_excludes_components=True,new_guide_pair_centers_mm=[near,inboard],
+    new_guide_spacing_mm=81,new_passages_match_reference=True,new_guides_physical_fit_tested=False)
 (R/'verification/case_report.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
 manifest={}
 for folder,ext in [('STL','stl'),('STEP','step')]:

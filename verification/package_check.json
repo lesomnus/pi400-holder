@@ -3,9 +3,9 @@
   "printable_meshes_valid": true,
   "sources_self_contained": true,
   "assembly_solid_counts": {
-    "case": 5,
+    "case": 7,
     "dock_pair": 3,
-    "eight_pi": 43
+    "eight_pi": 59
   },
   "assembly_contains_current_poe_guide_cases": true,
   "physical_fit_tested": false

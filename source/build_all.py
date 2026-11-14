@@ -23,7 +23,7 @@ def build_parts():
     b,l=F['make_case']()
     parts={'01_case_base':D['flat'](b),
         '02_case_lid':D['flat'](l).rotate((0,32,0),(1,32,0),180).translate((0,0,28.6)),
-        '03_cross_guide_cap_print_2':G['print_cap'](),'04_single_guide_cap_print_1':F['cap_print'](),
+        '03_cross_guide_cap_print_2':G['print_cap'](),'04_single_guide_cap_print_3':F['cap_print'](),
         '05_quad_dock_repeatable':J['make_universal'](),
         '06_gap_filling_connector':J['connector_print'](),'08_depth_link_optional':J['depth_link']()}
     for n,p in parts.items():export(n,p)
@@ -32,13 +32,13 @@ def build_assemblies():
     b=D['upright'](load('01_case_base'))
     l=D['upright'](load('02_case_lid').translate((0,0,-28.6)).rotate((0,32,0),(1,32,0),180))
     caps=[D['upright'](G['make_cap'](x,y)) for x,y in F['P']['tie_cluster_centers']]
-    caps.append(D['upright'](F['single_parts']()[1]))
+    caps.extend(D['upright'](F['single_parts'](x,y)[1]) for x,y in F['CENTERS'])
     def add_case(asm,i):
         shift=(0,i*55.6,0)
         for name,p,col in [('Base',b,(.68,.76,.81)),('Lid',l,(.83,.87,.9))]:
             asm.add(p.translate(shift),name=f'{name}_{i}',color=cq.Color(*col))
         for j,p in enumerate(caps):
-            asm.add(p.translate(shift),name=f'Guide_cap_{i}_{j}',color=cq.Color(*((.95,.6,.18) if j==2 else (.3,.57,.7))))
+            asm.add(p.translate(shift),name=f'Guide_cap_{i}_{j}',color=cq.Color(*((.95,.6,.18) if j>=2 else (.3,.57,.7))))
     single=cq.Assembly(name='Current_case_with_PoE_tie_guide');add_case(single,0)
     single.export(str(ROOT/'STEP/case_assembly.step'))
     a=cq.Assembly(name='Identical_docks_with_gap_filling_keyed_connector')

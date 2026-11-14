@@ -64,16 +64,16 @@ def main():
     base=cq.importers.importStep(str(ROOT/'STEP/01_case_base.step'))
     lid=cq.importers.importStep(str(ROOT/'STEP/02_case_lid.step')).translate((0,0,-28.6)).rotate((0,32,0),(1,32,0),180)
     caps=[F['G']['make_cap'](x,y) for x,y in F['P']['tie_cluster_centers']]
-    single=F['single_parts']()[1]
+    singles=[F['single_parts'](x,y)[1] for x,y in F['CENTERS']]
     path=ROOT/'previews/case_assembled.png'
-    render([(base,BASE),(lid,LID),*[(p,CROSS) for p in caps],(single,POE)],path,(.8,-1.7,1.5))
+    render([(base,BASE),(lid,LID),*[(p,CROSS) for p in caps],*[(p,POE) for p in singles]],path,(.8,-1.7,1.5))
     caption(path,'pi400-holder / CASE','Assembled enclosure with integral handle and open interface edge',
         'Current STEP geometry  |  Body: 247 x 64 x 28.6 mm  |  PCB and electronics not shown')
     path=ROOT/'previews/case_exploded.png'
-    parts=[(base,BASE),(lid.translate((0,0,55)),LID),*[(p.translate((0,0,12)),CROSS) for p in caps],(single.translate((0,0,12)),POE)]
+    parts=[(base,BASE),(lid.translate((0,0,55)),LID),*[(p.translate((0,0,12)),CROSS) for p in caps],*[(p.translate((0,0,12)),POE) for p in singles]]
     render(parts,path,(.7,-1.8,1.8),(1600,1000))
-    caption(path,'pi400-holder / INSIDE','Exploded view: base, lid, two cross-guide covers and one PoE tie-guide cover',
-        'Teal: cross-guide covers  |  Orange: PoE tie-guide cover  |  Parts separated for illustration')
+    caption(path,'pi400-holder / INSIDE','Exploded view: base, lid, two cross-guide covers and three straight tie-guide covers',
+        'Teal: cross-guide covers  |  Orange: straight tie-guide covers  |  Parts separated for illustration')
     print('Rendered case_assembled.png and case_exploded.png',flush=True)
 
 if __name__=='__main__':main()

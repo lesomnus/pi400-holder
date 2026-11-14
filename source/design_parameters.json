@@ -24,6 +24,7 @@
       32.0
     ]
   ],
+  "single_guide_centers": [[146.0, 32.0], [217.0, 32.0], [136.0, 32.0]],
   "tie_slot_length": 8.0,
   "tie_slot_width": 3.0,
   "tie_pair_spacing": 20.0,

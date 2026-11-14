@@ -1,15 +1,12 @@
-"""Pi400 case: one extra Y-direction tie path, 50mm inboard of handle-side cross.
-Coordinates in the flat printed case: extra center (146,32), existing (196,32).
-Run with CadQuery 2.8. No dock, PCB mount, handle or end-vent changes.
-"""
+"""Pi 400 case with three short-axis cable tie guides sharing the same cap."""
 from pathlib import Path
 import runpy,json
 import cadquery as cq
 HERE=Path(__file__).resolve().parent
 N=runpy.run_path(str(HERE/'integral_handle_case.py'));D=N['D'];C=N['C'];G=N['G'];P=C['P'];box=C['box']
-CENTER=(146.,32.);TOP=G['TOP']
+CENTERS=P["single_guide_centers"];TOP=G['TOP']
 
-def single_parts(x=146.,y=32.):
+def single_parts(x,y):
     # Same proven arc/legs as one arm of the existing cross, rotated to the short-side axis.
     w=P['guide_channel_width'];h=P['guide_channel_height'];t=P['guide_wall']
     a=P['guide_cap_half_length'];floor=P['floor'];fit=P['guide_leg_side_clearance']
@@ -30,8 +27,9 @@ def single_parts(x=146.,y=32.):
 
 def make_case():
     b,l=N['make_case']();flat=D['flat'](b)
-    ramp,cap,cutter=single_parts(*CENTER)
-    flat=flat.union(ramp).cut(cutter).clean()
+    for x,y in CENTERS:
+        ramp,_,cutter=single_parts(x,y)
+        flat=flat.union(ramp).cut(cutter).clean()
     return D['upright'](flat),l
 
 def cap_print():
